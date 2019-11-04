@@ -1,0 +1,26 @@
+{"intents": [
+    {"tag": "greeting",
+    "patterns": ["Hi", "Hello", "How are you?", "Is anyone there?"],
+    "reponses": ["Hello, thank you for visiting the PGIP-Tech website", "Hi there, how can I help?"],
+    "context_set": ""
+    },
+
+    {"tag": "goodbye",
+    "patterns": ["Bye", "See you later", "Goodbye"],
+    "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."],
+    "context_set": ""
+    },
+
+    {"tag": "thanks",
+    "patterns": ["Thanks", "Thank you", "That's helpful"],
+    "responses": ["Happy to help!", "Any time!", "My pleasure."],
+    "context_set": ""
+    },
+
+    {"tag": "help",
+    "patterns": ["I need help", "I need assistance", "Can you help me?"],
+    "responses": ["I would be glad to help, please tell me what you need."],
+    "context_set": ""
+    }
+
+]}
