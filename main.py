@@ -69,7 +69,7 @@ except:
         pickle.dump((words, labels, training, output), f)
 
 tensorflow.reset_default_graph()
-
+#Neural Network
 net = tflearn.input_data(shape=[None, len(training[0])])
 net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, 8)
@@ -99,12 +99,15 @@ def bag_of_words(s, words):
     return numpy.array(bag)
 
 def chat():
-    print("How can I help you? (Type quit to stop.)")
+    print("Hello PGIP Intern! How can I help you? (Type quit to stop)")
     while True:
         inp = input("You: ")
         if inp.lower() == "quit":
             break
             
         results = model.predict([bag_of_words(inp, words)])
-        print(results)
+        results_index = numpy.argmax(results)
+        tag = labels[results_index]
+        print(tag)
+
 chat()

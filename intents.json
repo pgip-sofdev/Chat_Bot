@@ -21,6 +21,17 @@
     "patterns": ["I need help", "I need assistance", "Can you help me?"],
     "responses": ["I would be glad to help, please tell me what you need."],
     "context_set": ""
+    },
+
+    {"tag": "timeclock",
+    "patterns": ["Where do I clock in?", "How do I clock in?"],
+    "responses": ["You must use the Time Clock Wizard to clock in and clock out. It can be found through the link provided in your Welcom Packet."],
+    "context_set": ""
+    },
+
+    {"tag": "templates",
+    "patterns": ["Where can I find the templates?", "Where is the project proposal template?", "Where is the intern presentation template located?", "Where is the Work Breakdown Structure?", "Where can I find the Client Contract?", "Where is the Charter Update Addendum?"],
+    "responses": ["The templates can be found by clicking on the Project Templates link to the right of your screen."],
+    "context_set": ""
     }
-    
 ]}
