@@ -1,37 +1,168 @@
 {"intents": [
     {"tag": "greeting",
     "patterns": ["Hi", "Hello", "How are you?", "Is anyone there?"],
-    "reponses": ["Hello, thank you for visiting the PGIP-Tech website", "Hi there, how can I help?"],
+    "responses": ["Hello, thank you for visiting the PGIP-Tech website.", "Hi there, how can I help?"],
     "context_set": ""
     },
 
     {"tag": "goodbye",
     "patterns": ["Bye", "See you later", "Goodbye"],
-    "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."],
-    "context_set": ""
+    "responses": ["See you later, thanks for visiting.", "Have a nice day", "Bye! Come back again soon."]
     },
 
     {"tag": "thanks",
     "patterns": ["Thanks", "Thank you", "That's helpful"],
-    "responses": ["Happy to help!", "Any time!", "My pleasure."],
-    "context_set": ""
+    "responses": ["Happy to help!", "Any time!", "My pleasure."]
     },
 
     {"tag": "help",
     "patterns": ["I need help", "I need assistance", "Can you help me?"],
-    "responses": ["I would be glad to help, please tell me what you need."],
-    "context_set": ""
+    "responses": ["I would be glad to help, please tell me what you need."]
     },
 
-    {"tag": "timeclock",
-    "patterns": ["Where do I clock in?", "How do I clock in?"],
-    "responses": ["You must use the Time Clock Wizard to clock in and clock out. It can be found through the link provided in your Welcom Packet."],
-    "context_set": ""
+    {"tag": "time clock",
+    "patterns": ["Where do I clock in?", "How do I clock in?", "How can I clock in?", "How does time get recorded?"],
+    "responses": ["You must use the Time Clock Wizard to clock in and clock out. It can be found through the link provided in your Welcom Packet. Check out the tutorial page for information on how to set up and use the Time Clock Wizard app."]
+    },
+
+    {"tag": "time clock password",
+    "patterns": ["I can't sign into Time Clock Wizard.", "I forgot my time clock wizard password", "I need to reset my time clock wizard password.", "I need my time clock wizard password.", "I don't remember my password for the time clock wizard."],
+    "responses": ["Time clock Wizard will have sent you the username and password to your pgip-tech email and a link for getting in. If you happen to lose this password, you can go to the web version of Time Clock Wizard and click \"Forgot Password\" under the login box. If you are still having issues clocking, submit a ticket to Freshdesk and service rep will get back to you in 24-48 hours. In the meantime, be sure to take screenshots of your time working, including the date and time from your screen, and upload them to your One Drive Screenshot folder plus a Time Clock Correction form in the Time Clock Correction One Drive folder. Let your manager know that you have added them so they can adjust your time."]
+    },
+
+    {"tag": "time clock online",
+    "patterns": ["Is there a subdomain and password to set up my Time Clock Wizard account?", "How do I access time clock wizard online?", "Can I access time clock wizard online?", "What is my password for the time clock wizard online?", "How do I access time clock wizard in a browser?"],
+    "responses": ["Time Clock Wizard sent information to your pgip-tech email when the account was set up. In this email, it provided the link to use to reach the TCW online. Using this link will automatically fill the subdomain line in the login box (pgip). You would have also received the username (firstinitiallastname) and password for the account. Please refer back to this email for the specific information."]
     },
 
     {"tag": "templates",
-    "patterns": ["Where can I find the templates?", "Where is the project proposal template?", "Where is the intern presentation template located?", "Where is the Work Breakdown Structure?", "Where can I find the Client Contract?", "Where is the Charter Update Addendum?"],
-    "responses": ["The templates can be found by clicking on the Project Templates link to the right of your screen."],
-    "context_set": ""
+    "patterns": ["Where can I find the templates?", "Where is the project proposal template?", "Where is the intern presentation template located?", "Where can I fin the intern presentation template?", "Where is the Work Breakdown Structure?", "Where can I find the Client Contract?", "Where is the Charter Update Addendum?"],
+    "responses": ["All templates can be found on the Documents page of the PGIP Portal."]
+    },
+
+    {"tag": "required hours",
+    "patterns": ["How many hours are required for the internship?", "How many hours per week do I need for the internship?", "How many hours are needed each week?", "How much time do I need to spend on the intership?", "How many hours are needed for my internship?", "How many hours are required?"],
+    "responses": ["10 hours are required every week.", "You need to complete 10 hours on the internship each week."]
+    },
+
+    {"tag": "tutorials",
+    "patterns": ["Are there any tutorials available for the internship?", "Where can I find the tutorials?", "Is there any tutorials that can help me get started?", "How do I use the time clock wizard?", "How do I sign a document?", "How do I log in to AWS?", "How do I use Outlook?", "How do I use Planner?", "How do I setup MFA?", "How do I setup Multi Factor Authentication?", "How do I use Stream?", "How do I use Freshdesk?"],
+    "responses": ["You can find informative tutorials on a variety of subjects on the \"Helpful Tutorials\" page of the PGIP Portal."]
+    },
+
+    {"tag": "ahod",
+    "patterns": ["When is the AHOD meeting?", "Is everyone required to attend the weeekly AHOD meeting?", "When is the All Hands On Deck meeting?", "Where can I access the AHOD meeting?", "When is AHOD?"],
+    "responses": ["Our Weekly Mandatory All-Hands-on-Deck (AHOD) meeting on Saturday at 12:00 pm EST in the Teams PGIP-Technology(AHoD) Room. Everyone is required to attend."]
+    },
+
+    {"tag": "getting started",
+    "patterns": ["Where do I start?", "How do I get started?", "How can I get started?", "What should I do first?"],
+    "responses": ["You should have received a welcome email with instructions on getting started. You can also check out the PGIP-Portal website and click on the PGIP-Tech New Intern Orientation and go through the steps for getting started."]
+    },
+
+    {"tag": "projects",
+    "patterns": ["When will I be assigned a project?", "What projects will I be working on?", "When do I get a project?"],
+    "responses": ["You will be assigned a project by your department manager after completing all required training and orientations."]
+    },
+
+    {"tag": "project location",
+    "patterns": ["Where is my project?", "Where can I find my project?", "Where are the projects?"],
+    "responses": ["Your project and tasks are created and assigned to you through Planner. If assigned a task, you will have received an email informing you of the task and deadline. You will learn more about your task during the weekly department meeting and you can communicate any questions or concerns with your manager through the meeting, Planner task, or Teams chat."]
+    },
+
+    {"tag": "meetings",
+    "patterns": ["When are the meetings?", "How many meetings am I required to attend?", "How many meetings are held each week?", "How many meetings are there?"],
+    "responses": ["You are required to attend your departments weekly meeting at the time scheduled by your manager.", "You are required to attend your weekly department meetings and the AHOD meeting. All meetings are held in the Microsoft Teams Application."]
+    },
+
+    {"tag": "meeting location",
+    "patterns": ["I can't find my meeting. Where is the invite?", "I can't find my meeting.", "Where are the meetings held?", "How do I access my meetings?"],
+    "responses": ["Your meeting invites have been set up when you entered the internship. These can be found in your Outlook and Teams Calendars. If you do not see an invite in your calendar, open Teams, click the Teams on the left sidebar, go to your department channel, click on Meetings and click on the blue meeting. This will open and you should see an area that asks if you would like to Add to calendar. Click on this and the invite will be added to your Teams calendar after refreshing it."]
+    },
+
+    {"tag": "evaluation",
+    "patterns": ["I need help with my eval.", "I need help with my evaluation.", "I need help with my online evaluation.", "Can you help me fill out my online eval?", "Who fills out my weekly evaluation?"],
+    "responses": ["The Evaluation is completed by your department manager and then sent directly to your instructor.", "You should forward the evaluation email to your manager indicating what it is , who it is from, and when it is due and they will take care of the rest.", "Your department manager will complete your weeekly eval."]
+    },
+
+    {"tag": "status report location",
+    "patterns": ["Where can I find the Intern Weekly Status Report?", "Where is the weekly status report template?", "Where is the weekly status report PDF?", "Where is the weekly status report template?", "Where is the weekly status report"],
+    "responses": ["In the PGIPortal SharePoint site, click on Orientation>Documents and it is listed for you as a Fill-in PDF that can be completed online or downloaded to your computer."]
+    },
+
+    {"tag": "status report submit",
+    "patterns": ["Where do I send my weekly status report?", "Who do I send my weekly status report to?"],
+    "responses": ["Once you have completed your weekly status report, upload it to your One Drive intern weekly status reports folder and let your manager know you have completed it and added it there. They will review it as needed."]
+    },
+
+    {"tag": "weekly report how to",
+    "patterns": ["How do I complete the Intern Weekly Status Report?", "How do I complete my weekly status report?", "How to fill out the Intern Weekly Status Report?", "How do I fill out my weekly status report?"],
+    "responses": ["In the PGIPortal SharePoint site, click on Orientation>Helpful Tutorials and scroll down to \"How to complete the weekly status report\". This video will help familiarize you through the process and send it to your manager."]
+    },
+
+    {"tag": "weekly status report",
+    "patterns": ["When do I have to turn in my Weekly Status Report?", "When is the weekly status report due?", "Can I submit my weekly status report on Friday?"],
+    "responses": ["The internship runs at the same schedule as Purdue Global courses; Wednesday through Tuesday. Your reports and many tasks are due on the next Tuesday just like the coursework. Managers need your reports by Tuesday at 11:59 pm ET as they will be submitting their report on Wednesday at 11:59 pm ET to their manager. Please speak with your manager if this cannot be completed for the current week by the time specified and explain why."]
+    },
+
+    {"tag": "one drive",
+    "patterns": ["I can't find my department's One Drive folder. How do I get to it?", "Where is my One Drive folder?", "How do I find the One Drive folder?"],
+    "responses": ["There are a couple of ways to get to your departments One Drive folder. Click on the blue SSO box at the top of the browser window and choose My Apps>One Drive. On the left side column in the Shared Libraries list, your department should be listed. IF not, click More Libraries and it will bring up more links to choose from. You can also reach your department’s One Drive folder from Teams. Open Teams, click Teams on the left sidebar, choose your department’s Channel, click on Projects>Files and it will list the folders found for your department documents. *This is for departmental use only, not your Intern documentation."]
+    },
+
+    {"tag": "folder",
+    "patterns": ["I can't find my intern folder in One Drive.", "Where is my intern folder?", "Do I need to create a One Drive folder?", "Where do I find my folder in One Drive?"],
+    "responses": ["Your One Drive Intern folder has been provided to you before you start your internship. Click on the blue SSO box at the top of the browser window and choose My Apps>One Drive. On the left side column is a Shared link. This is where you will find a folder titled with your first initial and last name (ie. jdoe). Click on this folder to open to the next 5 folders available to you: HR Paperwork, Presentations, Screenshots, Time Clock Corrections, and Weekly Status Reports."]
+    },
+
+    {"tag": "missed meetings",
+    "patterns": ["What should I do if I can't make the department AHOD meeting?", "I can't make the AHOD meeting.", "I am unable to attend the meeting.", "What happens if I miss the AHOD meeting?", "What should I do if I miss the AHOD meeting?"],
+    "responses": ["Be sure to let your department manager know that you cannot attend the meeting and why. You will have a chance to review the recorded meeting when you can but you will still be responsible for completing a weekly presentation for the department and a summary of the meeting you watched to earn the full time back. For example, if you miss the AHoD meeting, you need to view the recording, write a summary about the meeting, and submit the summary and your weekly presentation; all to your manager."]
+    },
+
+    {"tag": "recorded meetings",
+    "patterns": ["Where are the recorded meetings?", "Where is the recorded meeting that I need to review for the department?", "Where is the recorded meeting that I need to review for the AHOD meeting?", "Where can I access the recorded meetings?", "Where can I view the recorded meetings?", "Where can I access the recorded ahod meeting?"],
+    "responses": ["The recorded meetings are located in Stream and each department houses the past weekly meeting by date. For example, AHoD is in the AHoD group of videos and everyone has access to those. IT Support group will have all of their past meetings, titled by date, and only those in IT Support will be able to view those. If you need to view one from another department, please submit a Freshdesk ticket and the meeting link will be shared with you."]
+    },
+
+    {"tag": "chat",
+    "patterns": ["My meeting chat is not working.", "My Teams meeting is not letting me chat.", "No one can hear me in the meeting chat.", "My chat is not working."],
+    "responses": ["If this happens there may be a few different reasons and this depends on if you are in the web or desktop app for this. Check that your are in the Teams meeting through your pgip-tech email account from the SSO and using your MFA. Chat does not work if your are a guest. There have been times this happens and you might need to leave Teams altogether and sign back in through the SSO. Your system may be blocking this feature if your are in the web version, try downloading the free desktop version and see if this changes it. If these solutions do not work, please submit a ticket to the Freshdesk Support and someone will help you further."]
+    },
+
+    {"tag": "hours denied",
+    "patterns": ["Why were my hours denied?", "Why were my hours declined?", "Why do I have less hours than I thought?"],
+    "responses": ["Hours are verified through the Tracking screenshots and screenshots that have been uploaded to your One Drive Screenshots folder. If any of the screenshots do not match they notes of the work you described, we cannot allow the time. For example, if your are working on coursework as well as your department project, the TCW screenshots may take show an image of your coursework which is not approved for internship time. All internship time should be clocked in and you should only be working on the internship tasks, projects or meetings when clocked in. No coursework will be approved."]
+    },
+
+    {"tag": "aws",
+    "patterns": ["I can't get into AWS", "How do I log into AWS?", "I don't have access to AWS", "What is my AWS password?", "How do I get into AWS?", "How do I get access to AWS?"],
+    "responses": ["AWS access and credentials will be provided to you when it is related to a project or task including the use of AWS. Your manager will assign a task or project using AWS and inform you of this but will have requested access from IT Systems Network and/or Cybersecurity through Freshdesk as well. You will receive your credentials from one of these outlets."]
+    },
+
+    {"tag": "email signatures",
+    "patterns": ["How do I create my email signature?", "My email signature is wrong, how do I fix it?", "What is the correct format for my email signature?", "My email signature is wrong."],
+    "responses": ["The PGIP-Tech Signature Policy is based on the requirements per Purdue Global and the Internship. The policy can be found on the PGIPortal SharePoint site in Orientation>Documents and you can watch the PGIP-Tech email video in Orientation>Step 2 follow how it is done. The colors, lines, updated information, and links are all important and must work."]
+    },
+
+    {"tag": "email error",
+    "patterns": ["I can't access my email.", "I cant access my email.", "My password is not working for my email.", "My password does not work with my email.", "I can't login into my email."],
+    "responses": ["If this happens, be sure to take a snippet or screenshot of the error and submit a ticket in Freshdesk with the image attached. Explain what is happening and if you have tried any other solutions to fix it. They will get back to you within 24-48 hours."]
+    },
+
+    {"tag": "email login",
+    "patterns": ["Where do I go check my PGIP-Tech email?", "Where can I login into my email?", "How can I log into my email", "How can i view my emails?", "How can I access my email?"],
+    "responses": ["Click on the blue SSO box at the top of the browser and choose My Apps. Click on Outlook and this will open under your pgip-tech email account. You may watch a video about Outlook in the PGIPortal SharePoint site under Orientation>Helpful Tutorials>Outlook."]
+    },
+
+    {"tag": "timezone",
+    "patterns": ["I am on CST, what timezone is setup for meetings?", "I am on PST, what timezone is setup for meetings?", "I am in a different timezone, what time are the meetings set?", "What is the correct timezone for meetings?", "What is the PGIP timezone?", "Which timezone is standard for the meetings?", "My meeting will conflict with another, is it because of my timezone?"],
+    "responses": [" All meetings are setup using Eastern Standard Time so the calendar will show all meetings at their separate correct Eastern time that it is scheduled."]
+    },
+
+    {"tag": "orientation",
+    "patterns": ["I am looking at my emails and seeing Orientation 2 & 3, but no invite to Orientation 1.", "Is Orientation 1 the academic side or am I missing an email?", "Where is the invite for Orientation 1?", "I didn't receive an invite for Orientation 1.", "Where is Orientation 1?"],
+    "responses": ["The orientations are part of the internship experiential side. Orientation 1 is on the PGIPortal SharePoint site and includes the steps that will help you get comfortable with the internship. Orientation 2 & 3 will show as invites on your calendar and may be together or on separate days. You can view the Orientation 1 information at https://pgiptechcom.sharepoint.com/sites/PGIP-TechOrientation/"]
     }
+
 ]}

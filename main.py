@@ -14,7 +14,7 @@ with open("intents.json") as file:
     data = json.load(file)
 
 try:
-    x
+    x #remove x after completing all edits in intent.json
     with open("data.pickle", "rb") as f:
        words, labels, training, output = pickle.load(f)
 except:
@@ -79,6 +79,7 @@ net = tflearn.regression(net)
 # Train model
 model = tflearn.DNN(net)
 
+#after completing intents.json, remove # for try and except below
 #try:
     #model.load("model.tflearn")
 #except:
@@ -105,9 +106,17 @@ def chat():
         if inp.lower() == "quit":
             break
             
-        results = model.predict([bag_of_words(inp, words)])
+        results = model.predict([bag_of_words(inp, words)])[0]
         results_index = numpy.argmax(results)
         tag = labels[results_index]
-        print(tag)
+        #print(results) #if you want to review the probability of the results
+
+        if results[results_index] > 0.8:
+            for tg in data["intents"]:
+                if tg['tag'] == tag:
+                    responses = tg['responses']
+            print("Chatbot: " + random.choice(responses))
+        else:
+            print("I didn't understand your request. Please try again and be a little more specific.")
 
 chat()
